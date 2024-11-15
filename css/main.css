@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+    --text-shadow: 2px 2px 1px black;
+    --accent-shadow: 1px 1px 2px rgb(126, 126, 126), 0 0 25px orange, 0 0 5px darkorange;
+    --pricelist-gap: calc(var(--index) * 10);
+}
+
+.content, .hero, .hero__container {
+    will-change: transform;
+}
+
+body {
+    background-color: #111111;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+.hero {
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.hero__container {
+    height: 100vh;
+    min-height: 500px;
+    transform-style: preserve-3d;
+    transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+    transition: transform var(--transition);
+}
+
+.hero__item {
+    position: absolute;
+    inset: -5vw;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer-1 {
+    transform: translateZ(-55px) scale(1.06);
+    background-image: url(/img/layer1.jpg);
+}
+
+.layer-2 {
+    transform: translateZ(80px) scale(.8);
+    background-image: url(/img/layer2.png);
+}
+
+.layer-3 {
+    transform: translateZ(180px) scale(.8);
+}
+
+.layer-4 {
+    transform: translateZ(190px) scale(.9);
+}
+
+.layer-5 {
+    transform: translateZ(300px) scale(.7);
+    background-image: url(/img/layer5.png);
+}
+
+.hero-content {
+    font-size: calc(var(--index) * 2);
+    text-align: center;
+    letter-spacing: calc(var(--index) * -.10);
+    text-transform: uppercase;
+}
+
+.hero-content__p {
+    text-transform: none;
+    font-size: calc(var(--index) * 1);
+    letter-spacing: normal;
+    line-height: 4;
+    text-shadow: var(--text-shadow);
+
+}
+
+.button-call { 
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: calc(var(--index) * 1);
+    padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
+    background-color: transparent;
+    color: #fff;
+    border-radius: 10em;
+    border: rgb(255 255 255 / .4) 3px solid;
+    outline: none;
+    cursor: pointer;
+}
+
+.layer-4, .layer-5 {
+    pointer-events: none;
+}
+
+.pricelist {
+    display: flex;
+    padding: calc(var(--index) * 8) 0;
+}
+
+.pricelist > * {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pricelist__item {
+    max-width: calc(var(--index) * 21);
+    margin-bottom: var(--pricelist-gap);
+    max-height: 90vh;
+    position: relative;
+}
+
+.pricelist__left img {
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.pricelist__right img {
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+
+.text-block {
+    position: relative;
+}
+
+.text-block__h {
+    font-size: calc(var(--index) * 1.4);
+    margin-bottom: calc(var(--index) * 2);
+}
+
+.text-block__h span {
+    text-shadow: var(--accent-shadow);
+    line-height: calc(var(--index) * 1.5);
+}
+
+.text-block__p {
+    line-height: calc(var(--index) * 1.3);
+}
