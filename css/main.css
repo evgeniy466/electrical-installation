@@ -52,12 +52,12 @@ body::-webkit-scrollbar {
 
 .layer-1 {
     transform: translateZ(-55px) scale(1.06);
-    background-image: url(./img/layer1.jpg);
+    background-image: url(../img/layer1.jpg);
 }
 
 .layer-2 {
     transform: translateZ(80px) scale(.8);
-    background-image: url(./img/layer2.png);
+    background-image: url(../img/layer2.png);
 }
 
 .layer-3 {
@@ -70,7 +70,7 @@ body::-webkit-scrollbar {
 
 .layer-5 {
     transform: translateZ(300px) scale(.7);
-    background-image: url(./img/layer5.png);
+    background-image: url(../img/layer5.png);
 }
 
 .hero-content {
