@@ -59,8 +59,16 @@ const swiper = new Swiper('.swiper', {
     slidesPerView: 1,
     spaceBetween: 30,
     mousewheel: true,
+    mousewheel: {
+    forceToAxis: true,
+    sensitivity: 1,
+    releaseOnEdges: true,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
   });
+
+
+ 

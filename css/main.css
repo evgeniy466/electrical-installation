@@ -271,3 +271,12 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
 }
+
+.samples h2 {
+    text-align: center;
+}
+
+.samples .samples-container {
+    margin-top: calc(var(--pricelist-gap) / 2);
+    width: 100%;
+}
