@@ -302,3 +302,11 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
 }
+
+.reviews-h {
+    text-align: center;
+}
+
+.reviews-card__i {
+    width: 100px;
+}
