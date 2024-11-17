@@ -237,17 +237,17 @@ body::-webkit-scrollbar {
     margin: 0 auto;
 }
 
-.faq h2 {
+.faq-h {
     text-align: center;
 }
 
-.faq .faq__container {
+.faq__container {
     display: grid;
     grid-template-columns: 50% 50%;
     margin-top: calc(var(--pricelist-gap) / 2);
 }
 
-.faq .faq__container .faq-step {
+.faq-step {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -257,7 +257,7 @@ body::-webkit-scrollbar {
     height: calc(var(--index) * 8);
 }
 
-.faq .faq__container .faq-step span {
+.faq-step__number {
     display: block;
     text-shadow: var(--accent-shadow);
     font-size: 80px;
@@ -272,11 +272,33 @@ body::-webkit-scrollbar {
     justify-content: center;
 }
 
-.samples h2 {
+.samples-h {
     text-align: center;
 }
 
-.samples .samples-container {
+.samples-container {
     margin-top: calc(var(--pricelist-gap) / 2);
     width: 100%;
+    border: 1px solid;
+    overflow-x: scroll;
+}
+
+.samples-card {
+    padding: 5%;
+    position: relative;
+}
+
+.samples-card__i {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.reviews {
+    height: 100vh;
+    max-width: calc(var(--index)* 54);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

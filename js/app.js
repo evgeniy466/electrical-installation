@@ -60,9 +60,8 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 30,
     mousewheel: true,
     mousewheel: {
-    forceToAxis: true,
-    sensitivity: 1,
     releaseOnEdges: true,
+    eventsTarget: ".swiper"
     },
     pagination: {
       el: ".swiper-pagination",
