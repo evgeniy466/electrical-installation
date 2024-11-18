@@ -435,4 +435,5 @@ body::-webkit-scrollbar {
 
 .footer-right {
     border-top: 1px solid;
+    row-gap: 2rem;
 }
