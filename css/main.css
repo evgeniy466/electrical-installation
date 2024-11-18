@@ -297,7 +297,7 @@ body::-webkit-scrollbar {
 .reviews {
     height: 100vh;
     max-width: calc(var(--index)* 54);
-    margin: 0 auto;
+    margin: calc(var(--pricelist-gap) / 2) auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -353,4 +353,31 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+}
+
+.footer {
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+
+
+.footer-h {
+    text-align: center;
+}
+
+.footer-left, .footer-right {
+    width: 50%;
+    height: 100vh;
+}
+
+.footer-left {
+    background-color: #fff;
+    color: #111111;
+}
+
+.footer-right {
+    border-top: 1px solid;
 }
