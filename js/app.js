@@ -7,7 +7,7 @@ if (ScrollTrigger.isTouch !== 1) {
         effects: true
     });
 
-    gsap.fromTo('.hero', { opacity: 1 }, { 
+    gsap.fromTo('.hero', { opacity: 1 }, {
         opacity: 0,
         scrollTrigger: {
             trigger: '.hero',
@@ -16,16 +16,38 @@ if (ScrollTrigger.isTouch !== 1) {
             scrub: true
         }
     })
+
+    
+
+    gsap.fromTo('.prices', { opacity: 1 }, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.prices',
+            start: 'bottom bottom',
+            scrub: true
+        }
+    })
+
+    gsap.fromTo('.feedback', { opacity: 1 }, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.feedback',
+            start: 'center',
+            end: 'bottom 100',
+            scrub: true
+        }
+    })
+
 };
 
 
 
 
 
- let priceItemsLeft = gsap.utils.toArray('.pricelist__left .pricelist__item');
+let priceItemsLeft = gsap.utils.toArray('.pricelist__left .pricelist__item');
 
- priceItemsLeft.forEach(item => {
-    gsap.fromTo(item, {x: -100 ,opacity: 0}, {
+priceItemsLeft.forEach(item => {
+    gsap.fromTo(item, { x: -100, opacity: 0 }, {
         opacity: 1, x: 0,
         scrollTrigger: {
             trigger: item,
@@ -34,12 +56,12 @@ if (ScrollTrigger.isTouch !== 1) {
             scrub: true
         }
     })
- })
+})
 
- let priceItemsRight = gsap.utils.toArray('.pricelist__right .pricelist__item');
+let priceItemsRight = gsap.utils.toArray('.pricelist__right .pricelist__item');
 
- priceItemsRight.forEach(item => {
-    gsap.fromTo(item, {x: 100 ,opacity: 0}, {
+priceItemsRight.forEach(item => {
+    gsap.fromTo(item, { x: 100, opacity: 0 }, {
         opacity: 1, x: 0,
         scrollTrigger: {
             trigger: item,
@@ -48,7 +70,7 @@ if (ScrollTrigger.isTouch !== 1) {
             scrub: true
         }
     })
- })
+})
 
 let heroBlock = document.querySelector(".hero");
 heroBlock.addEventListener('mousemove', e => {
@@ -66,14 +88,13 @@ const swiper = new Swiper('.swiper', {
     spaceBetween: 30,
     mousewheel: true,
     mousewheel: {
-    releaseOnEdges: true,
-    eventsTarget: ".swiper"
+        releaseOnEdges: true,
+        eventsTarget: ".swiper"
     },
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
-  });
+});
 
 
- 
