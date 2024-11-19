@@ -1,20 +1,26 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
-ScrollSmoother.create({
-	wrapper: '.wrapper',
-	content: '.content',
-    effects: true
-})
+if (ScrollTrigger.isTouch !== 1) {
+    ScrollSmoother.create({
+        wrapper: '.wrapper',
+        content: '.content',
+        effects: true
+    });
 
-gsap.fromTo('.hero', { opacity: 1 }, { 
-    opacity: 0,
-    scrollTrigger: {
-        trigger: '.hero',
-        start: '.center',
-        end: 'bottom',
-        scrub: true
-    }
-})
+    gsap.fromTo('.hero', { opacity: 1 }, { 
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.hero',
+            start: '.center',
+            end: 'bottom',
+            scrub: true
+        }
+    })
+};
+
+
+
+
 
  let priceItemsLeft = gsap.utils.toArray('.pricelist__left .pricelist__item');
 
