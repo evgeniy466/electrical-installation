@@ -75,7 +75,6 @@ if (ScrollTrigger.isTouch !== 1) {
             start: 'top center',
             end: 'center center',
             scrub: true,
-            markers: true
         }
     })
 
@@ -86,7 +85,6 @@ if (ScrollTrigger.isTouch !== 1) {
             start: 'top center',
             end: 'center center',
             scrub: true,
-            markers: true
         }
     })
 
@@ -101,8 +99,8 @@ if (ScrollTrigger.isTouch !== 1) {
                 end: 'center center',
             },
             textShadow: 'var(--accent-shadow)',
-            delay: index * 5,
-            duration: 2
+            delay: index * 1,
+            duration: 1
         });
     });
 

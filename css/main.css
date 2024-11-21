@@ -244,12 +244,13 @@ body::-webkit-scrollbar {
 }
 
 .faq__container {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: calc(var(--pricelist-gap) / 2);
 }
 
 .faq-step {
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,6 +259,8 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid;
     height: calc(var(--index) * 8);
 }
+
+
 
 .faq-step__left {
     transform: translateX(-100px);
