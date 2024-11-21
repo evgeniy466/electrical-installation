@@ -17,8 +17,6 @@ if (ScrollTrigger.isTouch !== 1) {
         }
     })
 
-    
-
     gsap.fromTo('.prices', { opacity: 1 }, {
         opacity: 0,
         scrollTrigger: {
@@ -28,13 +26,13 @@ if (ScrollTrigger.isTouch !== 1) {
         }
     })
 
-    gsap.fromTo('.feedback', { opacity: 1 }, {
-        opacity: 0,
+    gsap.fromTo('.feedback', { scale: 1.1 }, {
+        scale: 1,
         scrollTrigger: {
-            trigger: '.feedback',
-            start: 'center',
-            end: 'bottom 100',
-            scrub: true
+            trigger: '.prices',
+            start: 'bottom bottom',
+            scrub: true,
+            markers: true
         }
     })
 
