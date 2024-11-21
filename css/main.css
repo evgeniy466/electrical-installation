@@ -259,10 +259,18 @@ body::-webkit-scrollbar {
     height: calc(var(--index) * 8);
 }
 
+.faq-step__left {
+    transform: translateX(-100px);
+}
+
+.faq-step__right {
+    transform: translateX(100px);
+}
+
 .faq-step__number {
     display: block;
-    text-shadow: var(--accent-shadow);
     font-size: 80px;
+    transition: all 2s ease;
 }
 
 .samples {

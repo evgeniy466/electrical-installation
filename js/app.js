@@ -7,6 +7,8 @@ if (ScrollTrigger.isTouch !== 1) {
         effects: true
     });
 
+    /* Hero Anim */
+
     gsap.fromTo('.hero', { opacity: 1 }, {
         opacity: 0,
         scrollTrigger: {
@@ -17,6 +19,13 @@ if (ScrollTrigger.isTouch !== 1) {
         }
     })
 
+    /* End Hero Anim */
+
+
+
+
+    /* Prices Anim */
+
     gsap.fromTo('.prices', { opacity: 1 }, {
         opacity: 0,
         scrollTrigger: {
@@ -26,15 +35,81 @@ if (ScrollTrigger.isTouch !== 1) {
         }
     })
 
+    /* End Prices Anim */
+
+
+
+    /* Feedback Anim */
+
+
     gsap.fromTo('.feedback', { scale: 1.1 }, {
         scale: 1,
         scrollTrigger: {
             trigger: '.prices',
             start: 'bottom bottom',
             scrub: true,
+        }
+    })
+
+    gsap.fromTo('.feedback', { opacity: 1 }, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.feedback',
+            start: 'bottom bottom',
+            scrub: true
+        }
+    })
+
+    /* End Feedback Anim */
+
+
+
+
+    /* FAQ Anim */
+
+
+    gsap.to('.faq-step__left', {
+        x: 0,
+        scrollTrigger: {
+            trigger: '.faq',
+            start: 'top center',
+            end: 'center center',
+            scrub: true,
             markers: true
         }
     })
+
+    gsap.to('.faq-step__right', {
+        x: 0,
+        scrollTrigger: {
+            trigger: '.faq',
+            start: 'top center',
+            end: 'center center',
+            scrub: true,
+            markers: true
+        }
+    })
+
+
+    let faqStepsNum = gsap.utils.toArray('.faq-step__number');
+
+    faqStepsNum.forEach((item, index) => {
+        gsap.to(item, {
+            scrollTrigger: {
+                trigger: '.faq',
+                start: 'top center',
+                end: 'center center',
+            },
+            textShadow: 'var(--accent-shadow)',
+            delay: index * 5,
+            duration: 2
+        });
+    });
+
+
+
+    /* End FAQ Anim */
+
 
 };
 
