@@ -108,6 +108,28 @@ if (ScrollTrigger.isTouch !== 1) {
 
     /* End FAQ Anim */
 
+    let gsapBl = document.querySelector('.samples-container').offsetWidth;
+
+
+	let gsapTrack = document.querySelector('.samples-track').offsetWidth;
+	let scrollSliderTransform = gsapTrack - gsapBl
+
+	gsap.to('.samples-track', {
+		scrollTrigger: {
+			trigger: '.samples',
+			start: 'center center',
+			end: () => '+=' + gsapTrack,
+			pin: true,
+			scrub: true
+		},
+		x: '-=' + scrollSliderTransform + 'px'
+	});
+
+
+
+    /* Samples Anim */
+
+
 
 };
 
@@ -153,19 +175,6 @@ heroBlock.addEventListener('mousemove', e => {
     })
 })
 
-const swiper = new Swiper('.swiper', {
-    direction: "vertical",
-    slidesPerView: 1,
-    spaceBetween: 30,
-    mousewheel: true,
-    mousewheel: {
-        releaseOnEdges: true,
-        eventsTarget: ".swiper"
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-});
+
 
 
