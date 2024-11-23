@@ -119,6 +119,7 @@ if (ScrollTrigger.isTouch !== 1) {
 
 	gsap.to('.samples-track', {
         ease: "none",
+        duration: .1,
 		scrollTrigger: {
 			trigger: '.samples',
 			start: 'center center',
