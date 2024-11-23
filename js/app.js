@@ -176,6 +176,15 @@ if (ScrollTrigger.isTouch !== 1) {
         },
     });
 
+    gsap.fromTo('.reviews', { opacity: 1 }, {
+        opacity: 0,
+        scrollTrigger: {
+            trigger: '.reviews',
+            start: 'bottom center',
+            scrub: true,
+        }
+    })
+
 
     
 
