@@ -282,7 +282,7 @@ body::-webkit-scrollbar {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly
 }
 
 .samples-h {
@@ -290,7 +290,7 @@ body::-webkit-scrollbar {
 }
 
 .samples-container {
-    margin-top: calc(var(--pricelist-gap) / 2);
+    height: 80vh;
     width: 100%;
     border: 1px solid;
     overflow: hidden;
@@ -335,7 +335,7 @@ body::-webkit-scrollbar {
     padding: calc(var(--pricelist-gap) / 4);
 }
 
-.reviews-container::before {
+.reviews-border__left {
   content: "";
   position: absolute;
   top: 0;
@@ -346,7 +346,7 @@ body::-webkit-scrollbar {
   border-left: 1px solid;
 }
 
-.reviews-container::after {
+.reviews-border__right {
     content: "";
     position: absolute;
     bottom: 0;
@@ -363,6 +363,9 @@ body::-webkit-scrollbar {
     align-items: center;
     text-align: center;
     row-gap: 2rem;
+    position: relative;
+    transform: translate(0px, 100px);
+    opacity: 0;
 }
 
 .reviews-card__i {

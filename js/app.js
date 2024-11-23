@@ -108,13 +108,17 @@ if (ScrollTrigger.isTouch !== 1) {
 
     /* End FAQ Anim */
 
+
+
+
+    /* Samples Anim */
+
     let gsapBl = document.querySelector('.samples-container').offsetWidth;
-
-
 	let gsapTrack = document.querySelector('.samples-track').offsetWidth;
 	let scrollSliderTransform = gsapTrack - gsapBl
 
 	gsap.to('.samples-track', {
+        ease: "none",
 		scrollTrigger: {
 			trigger: '.samples',
 			start: 'center center',
@@ -125,11 +129,55 @@ if (ScrollTrigger.isTouch !== 1) {
 		x: '-=' + scrollSliderTransform + 'px'
 	});
 
+    
+    /* End Samples Anim */
 
 
-    /* Samples Anim */
 
 
+    /* Reviews Anim */
+
+
+    gsap.fromTo('.reviews-border__left', {x: -100, opacity: 0}, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.reviews',
+            start: 'top center',
+            end: 'center center',
+            scrub: true,
+        }
+    })
+
+    gsap.fromTo('.reviews-border__right', {x: 100, opacity: 0}, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.reviews',
+            start: 'top center',
+            end: 'center center',
+            scrub: true,
+        }
+    })
+
+    const reviewCards = document.querySelectorAll(".reviews-card");
+
+    gsap.to(reviewCards, {
+        y: 0,
+        opacity: 1,
+        duration: 5,
+        stagger: 1,
+        scrollTrigger: {
+            trigger: ".reviews",
+            start: "top center",
+            end: "center center",
+            toggleActions: "play none none none",
+            scrub: 1
+        },
+    });
+
+
+    
 
 };
 
