@@ -20,18 +20,22 @@
     --pricelist-gap: calc(var(--index) * 10);
 }
 
-.hero, .hero__container {
-    will-change: transform;
-}
-
 body {
     color: var(--font-color);
     font-family: "Ubuntu-regular";
     overflow-x: hidden;
 }
 
+p {
+    font-size: var(--index);
+}
+
 body::-webkit-scrollbar {
     display: none;
+}
+
+.hero, .hero__container {
+    will-change: transform;
 }
 
 .content {

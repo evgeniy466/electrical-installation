@@ -205,7 +205,8 @@ priceItemsLeft.forEach(item => {
             trigger: item,
             start: '-850',
             end: '-220',
-            scrub: true
+            scrub: true,
+            markers: 1
         }
     })
 })
@@ -219,7 +220,8 @@ priceItemsRight.forEach(item => {
             trigger: item,
             start: '-850',
             end: '-230',
-            scrub: true
+            scrub: true,
+            markers: 1
         }
     })
 })
