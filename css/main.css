@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Ubuntu-regular";
+    src: url(../css/fonts/Ubuntu-Regular.ttf);
+}
+
 :root {
     --index: calc(1vw + 1vh);
     --font-color: #fff;
@@ -11,18 +16,26 @@
     --transition: 1.5s cubic-bezier(.05, .5, 0, 1);
     --text-shadow: 2px 2px 1px black;
     --accent-shadow: 1px 1px 2px rgb(126, 126, 126), 0 0 25px orange, 0 0 5px darkorange;
+
     --pricelist-gap: calc(var(--index) * 10);
 }
 
+.hero, .hero__container {
+    will-change: transform;
+}
+
 body {
-    background-color: #111111;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    color: var(--font-color);
+    font-family: "Ubuntu-regular";
     overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
-    width: 0px;
+    display: none;
+}
+
+.content {
+    background-color: var(--backface-color);
 }
 
 .hero {
@@ -36,10 +49,6 @@ body::-webkit-scrollbar {
     transform-style: preserve-3d;
     transform: rotateX(var(--move-y)) rotateY(var(--move-x));
     transition: transform var(--transition);
-}
-
-.content, .hero, .hero__container {
-    will-change: transform;
 }
 
 .hero__item {
@@ -84,7 +93,7 @@ body::-webkit-scrollbar {
 
 .hero-content__p {
     text-transform: none;
-    font-size: calc(var(--index) * 1);
+    font-size: var(--index);
     letter-spacing: normal;
     line-height: 4;
     text-shadow: var(--text-shadow);
@@ -94,19 +103,19 @@ body::-webkit-scrollbar {
 .button-call { 
     font-weight: 600;
     text-transform: uppercase;
-    font-size: calc(var(--index) * 1);
+    font-size: var(--index);
     padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
     background-color: transparent;
     color: #fff;
     border-radius: 10em;
-    border: rgb(255 255 255 / .4) 3px solid;
+    border: rgb(255 255 255 / .4) 1px solid;
     outline: none;
     cursor: pointer;
-    transition: all .2s ease;
+    transition: color .2s ease, border .2s ease, background-color .2s ease, box-shadow .2s ease;
 }
 
 .button-call:hover {
-    border: transparent 3px solid;
+    border: transparent 1px solid;
     color: #111111;
     background-color: #ffc107;
     box-shadow: var(--accent-shadow);
