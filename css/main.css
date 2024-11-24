@@ -87,27 +87,23 @@ body::-webkit-scrollbar {
 .hero-content {
     font-size: calc(var(--index) * 2);
     text-align: center;
-    letter-spacing: calc(var(--index) * -.10);
     text-transform: uppercase;
 }
 
 .hero-content__p {
     text-transform: none;
     font-size: var(--index);
-    letter-spacing: normal;
     line-height: 4;
     text-shadow: var(--text-shadow);
 
 }
 
 .button-call { 
-    font-weight: 600;
     text-transform: uppercase;
     font-size: var(--index);
     padding: calc(var(--index) * 1) calc(var(--index) * 1.5);
     background-color: transparent;
     color: #fff;
-    border-radius: 10em;
     border: rgb(255 255 255 / .4) 1px solid;
     outline: none;
     cursor: pointer;
@@ -147,11 +143,13 @@ body::-webkit-scrollbar {
 .pricelist__left img {
     border-top: 1px solid;
     border-left: 1px solid;
+    width: 100%;
 }
 
 .pricelist__right img {
     border-bottom: 1px solid;
     border-right: 1px solid;
+    width: 100%;
 }
 
 .text-block {
@@ -159,7 +157,7 @@ body::-webkit-scrollbar {
 }
 
 .text-block__h {
-    font-size: calc(var(--index) * 1.4);
+    font-size: calc(var(--index) * 1.5);
     margin-bottom: calc(var(--index) * 2);
 }
 
@@ -169,6 +167,7 @@ body::-webkit-scrollbar {
 }
 
 .text-block__p {
+    font-size: var(--index);
     line-height: calc(var(--index) * 1.3);
 }
 
