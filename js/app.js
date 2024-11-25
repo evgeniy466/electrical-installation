@@ -206,7 +206,6 @@ priceItemsLeft.forEach(item => {
             start: '-850',
             end: '-220',
             scrub: true,
-            markers: 1
         }
     })
 })
@@ -221,20 +220,23 @@ priceItemsRight.forEach(item => {
             start: '-850',
             end: '-230',
             scrub: true,
-            markers: 1
         }
     })
 })
 
 let heroBlock = document.querySelector(".hero");
+
+function updateParallax(e) {
+    heroBlock.style.setProperty('--move-x', `${(e.clientX - window.innerWidth / 2) * -.005}deg`);
+    heroBlock.style.setProperty('--move-y', `${(e.clientY - window.innerHeight / 2) * -.01}deg`);
+}
+
+let animationFrameId;
+
 heroBlock.addEventListener('mousemove', e => {
-    Object.assign(document.documentElement, {
-        style: `
-        --move-x: ${(e.clientX - window.innerWidth / 2) * -.005}deg;
-        --move-y: ${(e.clientY - window.innerHeight / 2) * -.01}deg;
-        `
-    })
-})
+    if (animationFrameId) cancelAnimationFrame(animationFrameId);
+    animationFrameId = requestAnimationFrame(() => updateParallax(e));
+});
 
 
 
