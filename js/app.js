@@ -187,7 +187,7 @@ if (ScrollTrigger.isTouch !== 1) {
         }
     })
 
-
+    /* End Reviews Anim */
     
 
 };
@@ -203,8 +203,8 @@ priceItemsLeft.forEach(item => {
         opacity: 1, x: 0,
         scrollTrigger: {
             trigger: item,
-            start: '-850',
-            end: '-220',
+            start: 'top bottom',
+            end: 'bottom center',
             scrub: true,
         }
     })
@@ -217,8 +217,8 @@ priceItemsRight.forEach(item => {
         opacity: 1, x: 0,
         scrollTrigger: {
             trigger: item,
-            start: '-850',
-            end: '-230',
+            start: 'top bottom',
+            end: 'bottom center',
             scrub: true,
         }
     })
