@@ -38,10 +38,6 @@ body::-webkit-scrollbar {
     display: none;
 }
 
-.hero, .hero__container, .samples {
-    will-change: transform;
-}
-
 .content {
     background-color: var(--backface-color);
 }
@@ -75,7 +71,7 @@ body::-webkit-scrollbar {
 }
 
 .layer-2 {
-    transform: translateZ(80px) scale(.8);
+    transform: translateZ(80px) scaleX(.85) scaleY(.8);
     background-image: url(../img/layer2.png);
 }
 
@@ -93,6 +89,10 @@ body::-webkit-scrollbar {
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4vh;
     font-size: calc(var(--index) * 2);
     text-align: center;
     text-transform: uppercase;
@@ -101,7 +101,6 @@ body::-webkit-scrollbar {
 .hero-content__p {
     text-transform: none;
     font-size: var(--index);
-    line-height: 4;
     text-shadow: var(--text-shadow);
 
 }
