@@ -8,7 +8,24 @@ if (ScrollTrigger.isTouch !== 1) {
         effects: true
     });
 
+    let heroBlock = document.querySelector(".hero");
+
+    function updateParallax(e) {
+        heroBlock.style.setProperty('--move-x', `${(e.clientX - window.innerWidth / 2) * -.005}deg`);
+        heroBlock.style.setProperty('--move-y', `${(e.clientY - window.innerHeight / 2) * -.01}deg`);
+    }
+
+    let animationFrameId;
+
+    heroBlock.addEventListener('mousemove', e => {
+        if (animationFrameId) cancelAnimationFrame(animationFrameId);
+        animationFrameId = requestAnimationFrame(() => updateParallax(e));
+    });
+
+
 };
+
+
 
 /* Hero Anim */
 
@@ -225,19 +242,6 @@ priceItemsRight.forEach(item => {
     })
 })
 
-let heroBlock = document.querySelector(".hero");
-
-function updateParallax(e) {
-    heroBlock.style.setProperty('--move-x', `${(e.clientX - window.innerWidth / 2) * -.005}deg`);
-    heroBlock.style.setProperty('--move-y', `${(e.clientY - window.innerHeight / 2) * -.01}deg`);
-}
-
-let animationFrameId;
-
-heroBlock.addEventListener('mousemove', e => {
-    if (animationFrameId) cancelAnimationFrame(animationFrameId);
-    animationFrameId = requestAnimationFrame(() => updateParallax(e));
-});
 
 
 

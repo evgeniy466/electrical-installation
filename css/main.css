@@ -68,7 +68,6 @@ body::-webkit-scrollbar {
 .layer-1 {
     transform: translateZ(-55px) scale(1.06);
     background-image: url(../img/layer1.jpg);
-    background-position: left;
 }
 
 .layer-2 {
@@ -128,6 +127,33 @@ body::-webkit-scrollbar {
 
 .layer-4, .layer-5 {
     pointer-events: none;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .hero__container {
+        transform-style: initial;
+    }
+
+    .layer-1 {
+        background-position: top;
+        background-size: contain;
+    }
+
+    .layer-2 {
+        background-position: bottom;
+        background-size: contain;
+        transform: none;
+    }
+
+    .layer-5 {
+        background-position: center;
+        background-size: cover;
+    }
+
+    .hero__item {
+        background-repeat: no-repeat;
+        inset: 0vw;
+    }
 }
 
 .pricelist {
