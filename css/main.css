@@ -23,7 +23,6 @@
 body {
     color: var(--font-color);
     font-family: "Ubuntu-regular";
-    overflow-x: hidden;
 }
 
 p {
@@ -40,6 +39,7 @@ body::-webkit-scrollbar {
 
 .content {
     background-color: var(--backface-color);
+    overflow-x: hidden;
 }
 
 .hero {
@@ -68,6 +68,7 @@ body::-webkit-scrollbar {
 .layer-1 {
     transform: translateZ(-55px) scale(1.06);
     background-image: url(../img/layer1.jpg);
+    background-position: left;
 }
 
 .layer-2 {
