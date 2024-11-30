@@ -89,6 +89,7 @@ body::-webkit-scrollbar {
 }
 
 .hero-content {
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,8 +182,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
-    max-width: calc(var(--index)* 54);
-    border: 1px solid;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -273,8 +273,6 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid;
     height: calc(var(--index) * 8);
 }
-
-
 
 .faq-step__left {
     transform: translateX(-100px);
