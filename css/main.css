@@ -135,14 +135,15 @@ body::-webkit-scrollbar {
     }
 
     .layer-1 {
-        background-position: top;
-        background-size: contain;
+        background-position: 0 top;
+        background-size: calc(var(--index) * 100);
     }
 
     .layer-2 {
-        background-position: bottom;
+        background-position: 70% bottom;
         background-size: contain;
         transform: none;
+        background-size: calc(var(--index) * 100);
     }
 
     .layer-5 {
@@ -152,7 +153,6 @@ body::-webkit-scrollbar {
 
     .hero__item {
         background-repeat: no-repeat;
-        inset: 0vw;
     }
 }
 
