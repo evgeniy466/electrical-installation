@@ -1,5 +1,6 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
 
+
 if (ScrollTrigger.isTouch !== 1) {
     ScrollSmoother.create({
         content: '.content',
@@ -46,6 +47,8 @@ gsap.fromTo('.hero', { opacity: 1 }, {
 
 /* Prices Anim */
 
+
+
 gsap.fromTo('.prices', { opacity: 1 }, {
     opacity: 0,
     scrollTrigger: {
@@ -54,6 +57,36 @@ gsap.fromTo('.prices', { opacity: 1 }, {
         scrub: true
     }
 })
+
+
+let priceItemsLeft = gsap.utils.toArray('.pricelist__left .pricelist__item');
+
+priceItemsLeft.forEach(item => {
+    gsap.fromTo(item, { x: -100, opacity: 0 }, {
+        opacity: 1, x: 0,
+        scrollTrigger: {
+            trigger: item,
+            start: 'top bottom',
+            end: 'bottom center',
+            scrub: true,
+        }
+    })
+})
+
+let priceItemsRight = gsap.utils.toArray('.pricelist__right .pricelist__item');
+
+priceItemsRight.forEach(item => {
+    gsap.fromTo(item, { x: 100, opacity: 0 }, {
+        opacity: 1, x: 0,
+        scrollTrigger: {
+            trigger: item,
+            start: 'top bottom',
+            end: 'bottom center',
+            scrub: true,
+        }
+    })
+})
+
 
 /* End Prices Anim */
 
@@ -212,35 +245,6 @@ gsap.fromTo('.reviews', { opacity: 1 }, {
 
 
 
-
-
-let priceItemsLeft = gsap.utils.toArray('.pricelist__left .pricelist__item');
-
-priceItemsLeft.forEach(item => {
-    gsap.fromTo(item, { x: -100, opacity: 0 }, {
-        opacity: 1, x: 0,
-        scrollTrigger: {
-            trigger: item,
-            start: 'top bottom',
-            end: 'bottom center',
-            scrub: true,
-        }
-    })
-})
-
-let priceItemsRight = gsap.utils.toArray('.pricelist__right .pricelist__item');
-
-priceItemsRight.forEach(item => {
-    gsap.fromTo(item, { x: 100, opacity: 0 }, {
-        opacity: 1, x: 0,
-        scrollTrigger: {
-            trigger: item,
-            start: 'top bottom',
-            end: 'bottom center',
-            scrub: true,
-        }
-    })
-})
 
 
 

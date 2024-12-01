@@ -129,7 +129,16 @@ body::-webkit-scrollbar {
     pointer-events: none;
 }
 
-@media only screen and (min-width : 320px) and (max-width : 480px) {
+@media (max-width : 480px) {
+
+    h2 {
+        font-size: calc(var(--index) * 1.5);
+    }
+
+    p {
+        font-size: calc(var(--index) * 1.2);
+    }
+
     .hero__container {
         transform-style: initial;
     }
@@ -140,7 +149,7 @@ body::-webkit-scrollbar {
     }
 
     .layer-2 {
-        background-position: 70% bottom;
+        background-position: 60% bottom;
         background-size: contain;
         transform: none;
         background-size: calc(var(--index) * 100);
@@ -154,11 +163,19 @@ body::-webkit-scrollbar {
     .hero__item {
         background-repeat: no-repeat;
     }
+
+    .hero-content__p {
+        font-size: calc(var(--index) * 1.5);
+    }
+
 }
 
 .pricelist {
-    display: flex;
+    display: grid;
+    grid-template-columns: 45vw 45vw;
     padding: calc(var(--index) * 8) 0 0 0;
+    max-width: 90vw;
+    margin: 0 auto;
 }
 
 .pricelist > * {
@@ -169,9 +186,9 @@ body::-webkit-scrollbar {
 }
 
 .pricelist__item {
-    max-width: calc(var(--index) * 21);
     margin-bottom: var(--pricelist-gap);
     max-height: 90vh;
+    max-width: 45vw;
     position: relative;
 }
 
