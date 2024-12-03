@@ -192,17 +192,16 @@ body::-webkit-scrollbar {
     position: relative;
 }
 
-.pricelist__left img {
+img.pricelist__item:nth-child(odd) {
     border-top: 1px solid;
     border-left: 1px solid;
-    width: 100%;
 }
 
-.pricelist__right img {
+img.pricelist__item:nth-child(even) {
     border-bottom: 1px solid;
     border-right: 1px solid;
-    width: 100%;
 }
+
 
 .text-block {
     position: relative;

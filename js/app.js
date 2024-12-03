@@ -48,7 +48,6 @@ gsap.fromTo('.hero', { opacity: 1 }, {
 /* Prices Anim */
 
 
-
 gsap.fromTo('.prices', { opacity: 1 }, {
     opacity: 0,
     scrollTrigger: {
@@ -58,34 +57,31 @@ gsap.fromTo('.prices', { opacity: 1 }, {
     }
 })
 
+let priceItems = document.querySelectorAll(".pricelist__item");
 
-let priceItemsLeft = gsap.utils.toArray('.pricelist__left .pricelist__item');
-
-priceItemsLeft.forEach(item => {
-    gsap.fromTo(item, { x: -100, opacity: 0 }, {
-        opacity: 1, x: 0,
-        scrollTrigger: {
-            trigger: item,
-            start: 'top bottom',
-            end: 'bottom center',
-            scrub: true,
-        }
-    })
-})
-
-let priceItemsRight = gsap.utils.toArray('.pricelist__right .pricelist__item');
-
-priceItemsRight.forEach(item => {
-    gsap.fromTo(item, { x: 100, opacity: 0 }, {
-        opacity: 1, x: 0,
-        scrollTrigger: {
-            trigger: item,
-            start: 'top bottom',
-            end: 'bottom center',
-            scrub: true,
-        }
-    })
-})
+for (let i = 0; i < priceItems.length; i++) {
+    if (i % 2 == 0) {
+        gsap.fromTo(priceItems[i], { x: -100, opacity: 0 }, {
+            opacity: 1, x: 0,
+            scrollTrigger: {
+                trigger: priceItems[i],
+                start: 'top bottom',
+                end: 'bottom center',
+                scrub: true,
+            }
+        })
+    } else {
+        gsap.fromTo(priceItems[i], { x: 100, opacity: 0 }, {
+            opacity: 1, x: 0,
+            scrollTrigger: {
+                trigger: priceItems[i],
+                start: 'top bottom',
+                end: 'bottom center',
+                scrub: true,
+            }
+        })
+    }
+}
 
 
 /* End Prices Anim */
