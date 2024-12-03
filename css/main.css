@@ -200,6 +200,7 @@ img.pricelist__item:nth-child(odd) {
 img.pricelist__item:nth-child(even) {
     border-bottom: 1px solid;
     border-right: 1px solid;
+    align-self: end;
 }
 
 
