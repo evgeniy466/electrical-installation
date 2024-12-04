@@ -68,7 +68,6 @@ for (let i = 0; i < priceItems.length; i++) {
                 start: 'top bottom',
                 end: 'center center',
                 scrub: true,
-                markers: 1
             }
         })
     } else {
@@ -79,7 +78,6 @@ for (let i = 0; i < priceItems.length; i++) {
                 start: 'top bottom',
                 end: 'center center',
                 scrub: true,
-                markers: 1
 
             }
         })
@@ -119,28 +117,6 @@ gsap.fromTo('.feedback', { opacity: 1 }, {
 
 /* FAQ Anim */
 
-
-gsap.to('.faq-step__left', {
-    x: 0,
-    scrollTrigger: {
-        trigger: '.faq',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-    }
-})
-
-gsap.to('.faq-step__right', {
-    x: 0,
-    scrollTrigger: {
-        trigger: '.faq',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-    }
-})
-
-
 let faqStepsNum = gsap.utils.toArray('.faq-step__number');
 
 faqStepsNum.forEach((item, index) => {
@@ -167,6 +143,7 @@ faqStepsNum.forEach((item, index) => {
 
 let gsapBl = document.querySelector('.samples-container').offsetWidth;
 let gsapTrack = document.querySelector('.samples-track').offsetWidth;
+console.log(gsapTrack)
 let scrollSliderTransform = gsapTrack - gsapBl
 
 gsap.to('.samples-track', {
@@ -199,6 +176,7 @@ gsap.fromTo('.reviews-border__left', { x: -100, opacity: 0 }, {
         start: 'top center',
         end: 'center center',
         scrub: true,
+        markers: 1
     }
 })
 
@@ -210,6 +188,8 @@ gsap.fromTo('.reviews-border__right', { x: 100, opacity: 0 }, {
         start: 'top center',
         end: 'center center',
         scrub: true,
+        markers: 1
+
     }
 })
 
