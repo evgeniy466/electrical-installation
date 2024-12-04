@@ -66,8 +66,9 @@ for (let i = 0; i < priceItems.length; i++) {
             scrollTrigger: {
                 trigger: priceItems[i],
                 start: 'top bottom',
-                end: 'bottom center',
+                end: 'center center',
                 scrub: true,
+                markers: 1
             }
         })
     } else {
@@ -76,8 +77,10 @@ for (let i = 0; i < priceItems.length; i++) {
             scrollTrigger: {
                 trigger: priceItems[i],
                 start: 'top bottom',
-                end: 'bottom center',
+                end: 'center center',
                 scrub: true,
+                markers: 1
+
             }
         })
     }

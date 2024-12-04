@@ -230,6 +230,16 @@ img.pricelist__item:nth-child(even) {
     height: 100vh;
 }
 
+.feedback-container {
+    border: 1px solid;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
+    margin: 0 auto;
+}
+
 .feedback-h {
     text-align: center;
 }
@@ -250,7 +260,7 @@ img.pricelist__item:nth-child(even) {
     border: none;
     outline: none;
     width: calc(var(--index)* 21);
-    font-size: calc(var(--index) / 1.5);
+    font-size: calc(var(--index) * 1.2);
 }
 
 .feedback-form > input, .feedback-form > textarea {
