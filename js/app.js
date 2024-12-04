@@ -176,7 +176,6 @@ gsap.fromTo('.reviews-border__left', { x: -100, opacity: 0 }, {
         start: 'top center',
         end: 'center center',
         scrub: true,
-        markers: 1
     }
 })
 
@@ -188,8 +187,6 @@ gsap.fromTo('.reviews-border__right', { x: 100, opacity: 0 }, {
         start: 'top center',
         end: 'center center',
         scrub: true,
-        markers: 1
-
     }
 })
 
