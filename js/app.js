@@ -167,28 +167,51 @@ gsap.to('.samples-track', {
 
 /* Reviews Anim */
 
+if (ScrollTrigger.isTouch !== 1) {
+    gsap.fromTo('.reviews-border__left', { x: -100, opacity: 0 }, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.reviews',
+            start: 'top center',
+            end: 'center center',
+            scrub: true,
+        }
+    })
+    
+    gsap.fromTo('.reviews-border__right', { x: 100, opacity: 0 }, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.reviews',
+            start: 'top center',
+            end: 'center center',
+            scrub: true,
+        }
+    })
+} else {
+    gsap.fromTo('.reviews-border__left', { x: -100, opacity: 0 }, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.samples',
+            start: 'center end',
+            scrub: true,
+        }
+    })
+    
+    gsap.fromTo('.reviews-border__right', { x: 100, opacity: 0 }, {
+        x: 0,
+        opacity: 1,
+        scrollTrigger: {
+            trigger: '.reviews',
+            start: 'center center',
+            end: 'bottom 55% ',
+            scrub: true,
+        }
+    })
+}
 
-gsap.fromTo('.reviews-border__left', { x: -100, opacity: 0 }, {
-    x: 0,
-    opacity: 1,
-    scrollTrigger: {
-        trigger: '.reviews',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-    }
-})
-
-gsap.fromTo('.reviews-border__right', { x: 100, opacity: 0 }, {
-    x: 0,
-    opacity: 1,
-    scrollTrigger: {
-        trigger: '.reviews',
-        start: 'top center',
-        end: 'center center',
-        scrub: true,
-    }
-})
 
 const reviewCards = document.querySelectorAll(".reviews-card");
 

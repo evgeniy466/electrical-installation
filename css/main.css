@@ -457,6 +457,7 @@ img.pricelist__item:nth-child(even) {
 }
 
 .footer-form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -468,11 +469,11 @@ img.pricelist__item:nth-child(even) {
     border: none;
     outline: none;
     width: calc(var(--index)* 21);
-    font-size: calc(var(--index) / 1.5);
 }
 
 .footer-form > input, .footer-form > button {
     height: 5vh;
+    width: 100%;
 }
 
 .footer-form > input, .footer-form > textarea {
@@ -480,6 +481,8 @@ img.pricelist__item:nth-child(even) {
     background-color: transparent;
     border: 1px solid #111111;
     color: #111111;
+    width: 100%;
+
 }
 
 .footer-form > textarea {
@@ -514,9 +517,11 @@ img.pricelist__item:nth-child(even) {
         font-size: calc(var(--index) * 1.5);
     }
 
-    p {
+    p, input {
         font-size: calc(var(--index) * 1.2);
     }
+
+    
 
     .hero__container {
         transform-style: initial;
@@ -603,4 +608,6 @@ img.pricelist__item:nth-child(even) {
      .reviews-card__task {
         font-size: calc(var(--index) * 1.3);
      }
+
+     
 }
