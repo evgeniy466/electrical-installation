@@ -609,5 +609,12 @@ img.pricelist__item:nth-child(even) {
         font-size: calc(var(--index) * 1.3);
      }
 
-     
+     .footer-form > textarea {
+        font-size: calc(var(--index)* 1.4);
+     }
+
+     .footer-right > * {
+        text-align: center;
+        font-size: calc(var(--index) * 1.4);
+     }
 }
