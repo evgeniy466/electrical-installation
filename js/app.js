@@ -175,7 +175,7 @@ if (ScrollTrigger.isTouch !== 1) {
             trigger: '.reviews',
             start: 'top center',
             end: 'center center',
-            scrub: true,
+            scrub: true
         }
     })
     
@@ -186,7 +186,7 @@ if (ScrollTrigger.isTouch !== 1) {
             trigger: '.reviews',
             start: 'top center',
             end: 'center center',
-            scrub: true,
+            scrub: true
         }
     })
 } else {

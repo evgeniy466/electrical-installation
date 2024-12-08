@@ -505,6 +505,12 @@ img.pricelist__item:nth-child(even) {
 
 @media (max-width : 480px) {
 
+
+    .pricelist__item, .feedback, .samples-track, .reviews-border__left, .reviews-border__right, .reviews-card {
+        will-change: transform;
+    }
+
+
     h2 {
         font-size: calc(var(--index) * 1.5);
     }
